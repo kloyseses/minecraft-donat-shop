@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Донат-магазин | Наш Minecraft сервер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Minecraft&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="minecraft-header">
+        <h1>Донат-магазин</h1>
+        <div class="server-info">
+            <div class="server-ip" id="server-ip">mc.example.com</div>
+            <button onclick="copyIP()">Копировать IP</button>
+            <div class="online">Онлайн: <span id="online-count">0</span></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="categories" id="categories">
+            <!-- Категории загружаются через JS -->
+        </div>
+
+        <div class="products-container" id="products">
+            <!-- Товары загружаются здесь -->
+        </div>
+
+        <div class="cart" id="cart">
+            <h3>Корзина</h3>
+            <div class="cart-items"></div>
+            <div class="cart-total">Итого: 0 руб</div>
+            <button class="checkout-btn" onclick="checkout()">Оформить заказ</button>
+        </div>
+    </main>
+
+    <!-- Подключаем Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
